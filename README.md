@@ -1,5 +1,3 @@
-# wsBackend-Fabrica26.1
-
 # 🚀 wsBackend-Fabrica26.1
 
 ## 📌 Sobre o projeto
