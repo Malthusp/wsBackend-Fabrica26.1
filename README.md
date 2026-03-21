@@ -4,9 +4,12 @@
 
 Este projeto é uma aplicação web desenvolvida com **Django** que funciona como um backend completo, capaz de:
 
-* Gerenciar dados internos (usuários, personagens e episódios)
-* Consumir dados de uma API externa (Rick and Morty API)
+Gerenciar dados internos (usuários, personagens e episódios)
+
+Consumir dados de uma API externa (Rick and Morty API)
+
 Exibir informações em páginas web simples
+
 Disponibilizar dados via API (REST)
 
 👉 Em resumo: é um sistema que mistura **dados próprios + dados externos**, simulando um cenário real de desenvolvimento backend.
@@ -66,9 +69,13 @@ O projeto pode ser executado facilmente usando Docker, sem precisar instalar dep
 ## 🛠️ Tecnologias utilizadas
 
 Python
+
 Django
+
 Django REST Framework
+
 Requests (para consumir API externa)
+
 Docker
 
 ---
@@ -80,6 +87,7 @@ Docker
 Você precisa ter instalado:
 
 Python (versão 3.10 ou superior)
+
 Docker (opcional, mas recomendado)
 
 ---
