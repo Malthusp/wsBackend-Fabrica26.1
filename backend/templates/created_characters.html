@@ -68,6 +68,10 @@
                     <h3>{{ character.name }}</h3>
                     <p><strong>Status:</strong> {{ character.status }}</p>
                     <p><strong>Espécie:</strong> {{ character.species }}</p>
+
+                    <a href="/characters-edit/{{ character.id }}/">✏️ Editar</a>
+
+                    <a href="/characters-delete/{{ character.id }}/">❌ Deletar</a>
                 </div>
             {% endfor %}
         {% else %}

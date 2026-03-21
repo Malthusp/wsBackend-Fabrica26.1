@@ -27,6 +27,7 @@ def created_characters_list(request):
     characters = Character.objects.all()
     return render(request, 'created_characters.html', {'characters': characters})
 
+#só usuários logados podem criar personagens
 @login_required
 def create_character(request):
     if request.method == 'POST':
@@ -54,5 +55,22 @@ def delete_character(request, id):
         character.delete()
 
     return redirect('characters_created')
+
+@login_required
+def edit_character(request, id):
+    character = get_object_or_404(Character, id=id)
+
+    if character.created_by != request.user:
+        return redirect('characters_created')
+
+    if request.method == 'POST':
+        character.name = request.POST.get('name')
+        character.status = request.POST.get('status')
+        character.species = request.POST.get('species')
+        character.save()
+
+        return redirect('characters_created')
+
+    return render(request, 'edit_character.html', {'character': character})
 
 # Create your views here.

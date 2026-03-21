@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from apps.characters.views import home, character_list, created_characters_list
+from apps.characters.views import home, character_list, created_characters_list, CharacterViewSet, create_character, delete_character, edit_character
 from apps.episodes.views import episode_list
 from rest_framework.routers import DefaultRouter
-from apps.characters.views import CharacterViewSet, create_character
 from apps.episodes.views import EpisodeViewSet
 
 router = DefaultRouter()
@@ -32,5 +31,7 @@ urlpatterns = [
     path('characters/', character_list, name='characters'),
     path('characters-create/', create_character, name='characters_create'),
     path('characters-created/', created_characters_list, name='characters_created'),
+    path('characters-delete/<int:id>/', delete_character, name='delete_character'),
+    path('characters-edit/<int:id>/', edit_character, name='edit_character'),
     path('episodes/', episode_list, name='episodes'),
 ] + router.urls

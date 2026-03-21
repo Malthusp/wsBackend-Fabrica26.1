@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Personagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            text-align: center;
+            background: #f5f5f5;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        input {
+            display: block;
+            width: 280px;
+            padding: 10px;
+            margin-bottom: 12px;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .save {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 16px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>✏️ Editar Personagem</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" value="{{ character.name }}" required>
+        <input type="text" name="status" value="{{ character.status }}" required>
+        <input type="text" name="species" value="{{ character.species }}" required>
+
+        <button class="save" type="submit">Salvar alterações</button>
+    </form>
+
+    <br>
+    <a class="back" href="/characters-created/">← Voltar</a>
+</body>
+</html>
