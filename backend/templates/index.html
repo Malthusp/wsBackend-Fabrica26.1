@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rick and Morty</title>
+</head>
+<body>
+    <h1>Personagens</h1>
+
+    {% for char in characters.results %}
+        <p>{{ char.name }} - {{ char.species }}</p>
+    {% endfor %}
+</body>
+</html>

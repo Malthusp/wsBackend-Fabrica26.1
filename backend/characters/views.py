@@ -8,4 +8,8 @@ def external_characters(request):
     data = get_characters()
     return Response(data)
 
+def home(request):
+    data = get_characters()
+    return render(request, 'index.html', {'characters': data})
+
 # Create your views here.
