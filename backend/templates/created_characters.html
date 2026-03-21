@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Personagens Criados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .empty {
+            text-align: center;
+            color: #666;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px 16px;
+            background: #3498db;
+            color: white;
+            border-radius: 6px;
+        }
+
+        .nav a:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/characters/">Personagens da API</a>
+            <a href="/characters-created/">Personagens Criados</a>
+            <a href="/episodes/">Episódios</a>
+        </div>
+
+        <h1>Personagens Criados no CRUD</h1>
+
+        {% if characters %}
+            {% for character in characters %}
+                <div class="card">
+                    <h3>{{ character.name }}</h3>
+                    <p><strong>Status:</strong> {{ character.status }}</p>
+                    <p><strong>Espécie:</strong> {{ character.species }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="empty">Nenhum personagem foi criado ainda.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
