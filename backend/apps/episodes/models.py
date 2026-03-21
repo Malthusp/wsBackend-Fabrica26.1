@@ -1,5 +1,5 @@
 from django.db import models
-from characters.models import Character
+from apps.characters.models import Character
 
 class Episode(models.Model):
     title = models.CharField(max_length=100)
