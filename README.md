@@ -12,8 +12,6 @@ Exibir informações em páginas web simples
 
 Disponibilizar dados via API (REST)
 
-👉 Em resumo: é um sistema que mistura **dados próprios + dados externos**, simulando um cenário real de desenvolvimento backend.
-
 ---
 
 ## 🧩 Funcionalidades
@@ -23,13 +21,17 @@ Disponibilizar dados via API (REST)
 O sistema permite:
 
 Criar
+
 Listar
+
 Atualizar
+
 Deletar
  
 Entidades:
 
 Personagens
+
 Episódios
 
 ---
@@ -39,6 +41,7 @@ Episódios
 O projeto consome dados da API pública de Rick and Morty (https://rickandmortyapi.com/api/character/ e https://rickandmortyapi.com/api/location), permitindo:
 
 Listar personagens
+
 Listar episódios
 
 ---
@@ -48,7 +51,9 @@ Listar episódios
 Possui páginas simples com HTML + Django Templates:
 
 Página inicial (Home)
+
 Lista de personagens
+
 Lista de episódios
 
 ---
@@ -56,6 +61,7 @@ Lista de episódios
 ### ✔ Autenticação
 
 Sistema de usuários
+
 Base para autenticação via token
 
 ---
