@@ -9,7 +9,10 @@ def external_characters(request):
     return Response(data)
 
 def home(request):
+    return render(request, 'home.html')
+
+def character_list(request):
     data = get_characters()
-    return render(request, 'index.html', {'characters': data})
+    return render(request, 'characters.html', {'characters': data})
 
 # Create your views here.

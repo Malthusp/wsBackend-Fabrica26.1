@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Episódios</title>
+</head>
+<body>
+
+<h1>Lista de Episódios</h1>
+
+{% for ep in episodes.results %}
+    <div>
+        <h3>{{ ep.name }}</h3>
+        <p>Episódio: {{ ep.episode }}</p>
+        <p>Data: {{ ep.air_date }}</p>
+    </div>
+    <hr>
+{% endfor %}
+
+</body>
+</html>
