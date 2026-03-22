@@ -34,11 +34,11 @@ https://www.docker.com/products/docker-desktop/
 
 ---
 
-## 2️⃣ Abra o terminal
+## 2️⃣ Abra o terminal na pasta wsBackend-Fabrica26.1
 
 Você pode usar:
 
-* VSCode → `Ctrl + "`
+* VSCode → `Ctrl + "` 
   ou
 * Windows PowerShell
 
