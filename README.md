@@ -105,11 +105,3 @@ backend/
 
 ---
 
-# 🏆 Observações
-
-* O projeto utiliza SQLite por padrão
-* Não é necessário instalar banco de dados externo
-* Docker simplifica toda a execução
-
----
-
